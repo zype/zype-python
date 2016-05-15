@@ -49,6 +49,3 @@ def _handle_result(result):
         return create_resource(result.content)
     else:
         return None
-
-if __name__ == "__main__":
-    client = Zype(api_key="")

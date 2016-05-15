@@ -12,3 +12,6 @@
 
 # Build folder.
 build/
+
+# Ignore the config file for testing
+config.ini
