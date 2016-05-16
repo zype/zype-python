@@ -8,6 +8,8 @@ install:
 deploy:
   # test pypi
   - provider: pypi
+    distributions: sdist
+    server: https://testpypi.python.org/pypi
     user: khfayzullaev
     password:
       secure: TyVD7e4Q+96PZqwdr9kxpkxrndGVQB+D+AzwgES7mGUxTT/z58wc+yBKcN+hezJry7CrMxqtkRuNHJpRBcowQjvZRS1UTDxidik9QulZC8yeo96kHzzNaxUCbZh5YcqXiZXYQkyCuAJZMF9hYEgwENjzYX4xvM4/OzA30A/yb43olG6ENgHo1kHATzhXet4BZPQj+qcluLdUjVAGH4zGK/vh+LTWkKGvAnwZ0F3JHVvZ+Txyv3/DAn56qYXqJf6S9FBn6/FgL9HK6DG+JJ7lpm+XhjgeeH5Ti7AsrN2wPNzz7U2zHLaa2ewcFpEKIXCL63ZlR9bOMKVHj/cHHHVFCcHlSsbALJDHCpJzDgjN3J/r6QQtE/OWBqf03CAenJF9cKjiulpDV7IHVj9kbjsHqssVa8DNIq+gkkqFTTJa5MslrlFq5m5XJ7avc/kMtUph5Vct6RpfNZalkX2L1WQQQQZcy1PDZS23YirEQZV+H4b2XKhWIudLLa14qz+BPTTG5bM0spn2SNuvCYYIvaospZet0osfYdGls0RFSVNLBTVzExng10CGoOi71PlcOJj2yWljh0AwMJBPYp3bDTG1niFh6oC0dVRBSWlv3Tt0sKIlozz6nTYGbPY0VoVpao4EdqHT+Y8UGTXwcCwJqlgem7BwPH/zoaHHzdj8Kd6Zm5U=
@@ -18,7 +20,8 @@ deploy:
 
   # production pypi
   - provider: pypi
-    user: "Dan.Riti"
+    distributions: sdist
+    user: khfayzullaev
     password:
       secure: TyVD7e4Q+96PZqwdr9kxpkxrndGVQB+D+AzwgES7mGUxTT/z58wc+yBKcN+hezJry7CrMxqtkRuNHJpRBcowQjvZRS1UTDxidik9QulZC8yeo96kHzzNaxUCbZh5YcqXiZXYQkyCuAJZMF9hYEgwENjzYX4xvM4/OzA30A/yb43olG6ENgHo1kHATzhXet4BZPQj+qcluLdUjVAGH4zGK/vh+LTWkKGvAnwZ0F3JHVvZ+Txyv3/DAn56qYXqJf6S9FBn6/FgL9HK6DG+JJ7lpm+XhjgeeH5Ti7AsrN2wPNzz7U2zHLaa2ewcFpEKIXCL63ZlR9bOMKVHj/cHHHVFCcHlSsbALJDHCpJzDgjN3J/r6QQtE/OWBqf03CAenJF9cKjiulpDV7IHVj9kbjsHqssVa8DNIq+gkkqFTTJa5MslrlFq5m5XJ7avc/kMtUph5Vct6RpfNZalkX2L1WQQQQZcy1PDZS23YirEQZV+H4b2XKhWIudLLa14qz+BPTTG5bM0spn2SNuvCYYIvaospZet0osfYdGls0RFSVNLBTVzExng10CGoOi71PlcOJj2yWljh0AwMJBPYp3bDTG1niFh6oC0dVRBSWlv3Tt0sKIlozz6nTYGbPY0VoVpao4EdqHT+Y8UGTXwcCwJqlgem7BwPH/zoaHHzdj8Kd6Zm5U=
     on:
