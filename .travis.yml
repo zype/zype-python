@@ -7,25 +7,28 @@ install:
 - pip install .
 - pip install -r requirements.txt
 deploy:
-- provider: pypi
-  distributions: sdist
-  server: https://testpypi.python.org/pypi
-  user: khfayzullaev
+  matrix:
+  - provider: pypi
+    distributions: sdist
+    server: https://testpypi.python.org/pypi
+    user: khfayzullaev
+    password:
+      secure: TyVD7e4Q+96PZqwdr9kxpkxrndGVQB+D+AzwgES7mGUxTT/z58wc+yBKcN+hezJry7CrMxqtkRuNHJpRBcowQjvZRS1UTDxidik9QulZC8yeo96kHzzNaxUCbZh5YcqXiZXYQkyCuAJZMF9hYEgwENjzYX4xvM4/OzA30A/yb43olG6ENgHo1kHATzhXet4BZPQj+qcluLdUjVAGH4zGK/vh+LTWkKGvAnwZ0F3JHVvZ+Txyv3/DAn56qYXqJf6S9FBn6/FgL9HK6DG+JJ7lpm+XhjgeeH5Ti7AsrN2wPNzz7U2zHLaa2ewcFpEKIXCL63ZlR9bOMKVHj/cHHHVFCcHlSsbALJDHCpJzDgjN3J/r6QQtE/OWBqf03CAenJF9cKjiulpDV7IHVj9kbjsHqssVa8DNIq+gkkqFTTJa5MslrlFq5m5XJ7avc/kMtUph5Vct6RpfNZalkX2L1WQQQQZcy1PDZS23YirEQZV+H4b2XKhWIudLLa14qz+BPTTG5bM0spn2SNuvCYYIvaospZet0osfYdGls0RFSVNLBTVzExng10CGoOi71PlcOJj2yWljh0AwMJBPYp3bDTG1niFh6oC0dVRBSWlv3Tt0sKIlozz6nTYGbPY0VoVpao4EdqHT+Y8UGTXwcCwJqlgem7BwPH/zoaHHzdj8Kd6Zm5U=
+    on:
+      tags: false
+      branch: master
+      condition: $TRAVIS_PYTHON_VERSION = "2.7"
+  - provider: pypi
+    distributions: sdist
+    user: khfayzullaev
+    password:
+      secure: TyVD7e4Q+96PZqwdr9kxpkxrndGVQB+D+AzwgES7mGUxTT/z58wc+yBKcN+hezJry7CrMxqtkRuNHJpRBcowQjvZRS1UTDxidik9QulZC8yeo96kHzzNaxUCbZh5YcqXiZXYQkyCuAJZMF9hYEgwENjzYX4xvM4/OzA30A/yb43olG6ENgHo1kHATzhXet4BZPQj+qcluLdUjVAGH4zGK/vh+LTWkKGvAnwZ0F3JHVvZ+Txyv3/DAn56qYXqJf6S9FBn6/FgL9HK6DG+JJ7lpm+XhjgeeH5Ti7AsrN2wPNzz7U2zHLaa2ewcFpEKIXCL63ZlR9bOMKVHj/cHHHVFCcHlSsbALJDHCpJzDgjN3J/r6QQtE/OWBqf03CAenJF9cKjiulpDV7IHVj9kbjsHqssVa8DNIq+gkkqFTTJa5MslrlFq5m5XJ7avc/kMtUph5Vct6RpfNZalkX2L1WQQQQZcy1PDZS23YirEQZV+H4b2XKhWIudLLa14qz+BPTTG5bM0spn2SNuvCYYIvaospZet0osfYdGls0RFSVNLBTVzExng10CGoOi71PlcOJj2yWljh0AwMJBPYp3bDTG1niFh6oC0dVRBSWlv3Tt0sKIlozz6nTYGbPY0VoVpao4EdqHT+Y8UGTXwcCwJqlgem7BwPH/zoaHHzdj8Kd6Zm5U=
+    on:
+      tags: true
+      branch: master
+      condition: $TRAVIS_PYTHON_VERSION = "2.7"
   password:
-    secure: TyVD7e4Q+96PZqwdr9kxpkxrndGVQB+D+AzwgES7mGUxTT/z58wc+yBKcN+hezJry7CrMxqtkRuNHJpRBcowQjvZRS1UTDxidik9QulZC8yeo96kHzzNaxUCbZh5YcqXiZXYQkyCuAJZMF9hYEgwENjzYX4xvM4/OzA30A/yb43olG6ENgHo1kHATzhXet4BZPQj+qcluLdUjVAGH4zGK/vh+LTWkKGvAnwZ0F3JHVvZ+Txyv3/DAn56qYXqJf6S9FBn6/FgL9HK6DG+JJ7lpm+XhjgeeH5Ti7AsrN2wPNzz7U2zHLaa2ewcFpEKIXCL63ZlR9bOMKVHj/cHHHVFCcHlSsbALJDHCpJzDgjN3J/r6QQtE/OWBqf03CAenJF9cKjiulpDV7IHVj9kbjsHqssVa8DNIq+gkkqFTTJa5MslrlFq5m5XJ7avc/kMtUph5Vct6RpfNZalkX2L1WQQQQZcy1PDZS23YirEQZV+H4b2XKhWIudLLa14qz+BPTTG5bM0spn2SNuvCYYIvaospZet0osfYdGls0RFSVNLBTVzExng10CGoOi71PlcOJj2yWljh0AwMJBPYp3bDTG1niFh6oC0dVRBSWlv3Tt0sKIlozz6nTYGbPY0VoVpao4EdqHT+Y8UGTXwcCwJqlgem7BwPH/zoaHHzdj8Kd6Zm5U=
-  on:
-    tags: false
-    branch: master
-    condition: $TRAVIS_PYTHON_VERSION = "2.7"
-- provider: pypi
-  distributions: sdist
-  user: khfayzullaev
-  password:
-    secure: TyVD7e4Q+96PZqwdr9kxpkxrndGVQB+D+AzwgES7mGUxTT/z58wc+yBKcN+hezJry7CrMxqtkRuNHJpRBcowQjvZRS1UTDxidik9QulZC8yeo96kHzzNaxUCbZh5YcqXiZXYQkyCuAJZMF9hYEgwENjzYX4xvM4/OzA30A/yb43olG6ENgHo1kHATzhXet4BZPQj+qcluLdUjVAGH4zGK/vh+LTWkKGvAnwZ0F3JHVvZ+Txyv3/DAn56qYXqJf6S9FBn6/FgL9HK6DG+JJ7lpm+XhjgeeH5Ti7AsrN2wPNzz7U2zHLaa2ewcFpEKIXCL63ZlR9bOMKVHj/cHHHVFCcHlSsbALJDHCpJzDgjN3J/r6QQtE/OWBqf03CAenJF9cKjiulpDV7IHVj9kbjsHqssVa8DNIq+gkkqFTTJa5MslrlFq5m5XJ7avc/kMtUph5Vct6RpfNZalkX2L1WQQQQZcy1PDZS23YirEQZV+H4b2XKhWIudLLa14qz+BPTTG5bM0spn2SNuvCYYIvaospZet0osfYdGls0RFSVNLBTVzExng10CGoOi71PlcOJj2yWljh0AwMJBPYp3bDTG1niFh6oC0dVRBSWlv3Tt0sKIlozz6nTYGbPY0VoVpao4EdqHT+Y8UGTXwcCwJqlgem7BwPH/zoaHHzdj8Kd6Zm5U=
-  on:
-    tags: true
-    branch: master
-    condition: $TRAVIS_PYTHON_VERSION = "2.7"
+    secure: q+Htt6zGKJflrI8kfKI7SZIxtbTFcpH5ZtCZNhBgHMsHxUJpzo14uC0SbzeLqIznlXxd1r1hQudtTHeDzXjqDw9xk7/Bsq3UIChRg8Sx52jIWGJSdgG+t7HsEJS4N86qseXeLaH/21x8UzLkuRFrBpXlJOIwONA9+JoluulNaTE9QEBUyB6phNXYO0zMRbs6H8V5Vw9Y5T2tGcBTdsLYfQHFoZRPhFOFUegyY/o+nyjI+WhTNm40wgrQUFWHzGy1/8rXzKRnhn7f5XHQsGJHuHyYQIhlqOnESG6kg+xGH3/UfYFwah4dwv0yQtSHNSWfhttBYxTxgx+F5R+gTuDpDiaRn7qpaOQVqJAIJSUMStyZyRxhhW15RZU3Bt2rOG9/CM7ERt0cBw2+6lUdsHvzrGusDE7RJh6RC9mgBvmOf8wwTYWvKSH3sS5Xw74tQcaNxcDfWstoaEDtf01POS4v+uqWfjEVZQ6g7SN0k1Fek/F7lTqJc+WnXfVcEqLttclWQfj/R7FEve+neEWQhwqVoE7GhRJ5OaNs7FencY9Mv4FscnGQMHztqb7yP+JJQBXtAyKwweX6/87g35AfNjVPMz9YFcQ4RZ9l0X20Hg9S+0UMbvuv8l38SikEcAMRs2egzT6vdqgrn1ITAmsW3A0quH4eCCFjVr3M7pngOEj4DY8=
 before_install:
 - openssl aes-256-cbc -K $encrypted_f16542cddf46_key -iv $encrypted_f16542cddf46_iv
   -in config.ini.enc -out zype/tests/config.ini -d
