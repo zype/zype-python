@@ -1,8 +1,8 @@
 language: python
 python:
   - '2.7'
-#scripts
-script:
+# command to run tests
+script: nosetests
 # install dependencies
 install:
   - "pip install ."
