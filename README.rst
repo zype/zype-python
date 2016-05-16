@@ -1,5 +1,8 @@
 zype-python 0.1.0
 -----------------
+.. image:: https://travis-ci.org/khfayzullaev/zype-python.svg?branch=master
+    :target: https://travis-ci.org/khfayzullaev/zype-python
+
 A simple wrapper around Zype API inspired by SoundCloud API `client <https://github.com/soundcloud/soundcloud-python>`_.
 
 Installation
