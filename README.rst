@@ -1,4 +1,4 @@
-zype-python 0.1.0
+zype-python 0.2.0
 -----------------
 .. image:: https://travis-ci.org/khfayzullaev/zype-python.svg?branch=master
     :target: https://travis-ci.org/khfayzullaev/zype-python

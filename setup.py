@@ -6,7 +6,7 @@ def readme():
         return f.read()
 
 setup(name='zype',
-      version='0.1.0',
+      version='0.2.0',
       description='Zype API Python Client',
       classifiers=[
           'Development Status :: 2 - Pre-Alpha',
