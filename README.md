@@ -1,5 +1,4 @@
-##
-n
+zype-python
 ===========
 
 [![Build Status](https://travis-ci.org/khfayzullaev/zype-python.svg?branch=master)](https://travis-ci.org/khfayzullaev/zype-python)
