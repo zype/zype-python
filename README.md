@@ -19,7 +19,7 @@ if videos is not None:
 Installation
 ------------
 
-`$ pip install zype-python`
+`$ pip install zype`
 
 Contribute
 ----------
