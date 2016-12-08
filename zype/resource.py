@@ -1,3 +1,5 @@
+__author__ = "Khurshid Fayzullaev"
+
 try:
     from UserList import UserList
 except ImportError:

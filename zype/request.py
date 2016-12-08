@@ -1,3 +1,5 @@
+__author__ = "Khurshid Fayzullaev"
+
 try:
     from urllib import urlencode
 except ImportError:

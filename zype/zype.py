@@ -1,3 +1,4 @@
+__author__ = "Khurshid Fayzullaev"
 
 from functools import partial
 

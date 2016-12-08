@@ -1,3 +1,5 @@
+__author__ = "Khurshid Fayzullaev"
+
 import os
 from ConfigParser import SafeConfigParser
 from unittest import TestCase
